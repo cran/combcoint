@@ -44,7 +44,7 @@ bayerhanck(linvestment ~ lincome + lconsumption, data = lutkepohl_e1)
 bayerhanck(linvestment ~ lincome + lconsumption, data = lutkepohl_e1, lags = 4)
 
 
-\dontshow{if (requireNamespace("MTS", quietly = TRUE)) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
+\dontshow{if (requireNamespace("MTS", quietly = TRUE)) withAutoprint(\{ # examplesIf}
 # World Almanac and Book of Facts (1975): Monthly simple returns of the stocks of IBM,
 # Coca Cola and S&P Composite index
 try({

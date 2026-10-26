@@ -1,4 +1,14 @@
+# combcoint 0.3.0
+
+## Internal changes
+
+- Removed the dependency on `tsDyn`; the Johansen ML VECM estimation is now
+  implemented internally instead of calling `tsDyn::VECM()`.
+
 # combcoint 0.2.0
+
+## Internal changes
+- Updated the internal model used for predicting crit values.
 
 # combcoint 0.1.0
 

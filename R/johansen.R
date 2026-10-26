@@ -31,10 +31,10 @@ johansen <- function(formula, data, type = "eigen", lags = 1, trend = "const"){
   if (identical(trend, "trend"))
     trend = "both"
 
-  jo_vec <- tsDyn::VECM(x, lag = lags,
-                        include = trend, # Bezeichnung Trend anpassen
-                        estim = "ML")
-  jo_vec_sum <- summary(tsDyn::rank.test(jo_vec, type = type))
+  jo_vec <- vecm_ml(x,
+                    lag = lags,
+                    include = trend)
+  jo_vec_sum <- rank_test(jo_vec, type = type)$res_df
   test.stat <- as.numeric(jo_vec_sum$eigen[1])
 
   out <- list(test.stat = test.stat,
